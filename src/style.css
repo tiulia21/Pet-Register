@@ -1,0 +1,23 @@
+header {
+  background-color: lightgreen;
+  display: flex;
+  padding-top: 20px;
+}
+div {
+  margin-right: 40px;
+}
+body {
+  background-color: lightblue;
+}
+.photos {
+  display: flex;
+}
+.photos1 {
+  display: flex;
+}
+footer {
+  padding: 100px;
+  text-align: center;
+  border-bottom: 20px;
+  border-color: greenyellow;
+}
