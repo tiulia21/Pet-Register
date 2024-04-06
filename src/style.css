@@ -1,19 +1,37 @@
 header {
-  background-color: lightgreen;
+  background-color: blanchedalmond;
   display: flex;
   padding-top: 20px;
+  border-end-end-radius: 50px;
+  border-bottom-left-radius: 50px;
 }
-div {
-  margin-right: 40px;
+.home {
+  display: flex;
+  height: 50px;
+  margin: auto;
+  padding-left: 70%;
+}
+
+.pets {
+  display: grid;
+  padding: 40px;
+  margin-left: 30%;
+  margin-right: 30%;
 }
 body {
-  background-color: lightblue;
+  background-color: white;
 }
-.photos {
-  display: flex;
+h2 {
+  text-align: center;
+  padding-top: 60px;
 }
-.photos1 {
+.gallery {
   display: flex;
+  justify-content: center;
+}
+.gallery1 {
+  display: flex;
+  justify-content: center;
 }
 footer {
   padding: 100px;
