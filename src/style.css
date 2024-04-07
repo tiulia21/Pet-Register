@@ -39,3 +39,9 @@ footer {
   border-bottom: 20px;
   border-color: greenyellow;
 }
+.list {
+  display: none;
+}
+.add {
+  display: none;
+}
