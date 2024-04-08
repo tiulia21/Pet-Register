@@ -19,7 +19,8 @@ header {
   margin-right: 30%;
 }
 body {
-  background-color: white;
+  background-image: images/frame.png;
+  background-size: ;
 }
 h2 {
   text-align: center;
