@@ -1,48 +1,56 @@
 header {
-  background-color: blanchedalmond;
+  background-color: whitesmoke;
   display: flex;
-  padding-top: 20px;
-  border-end-end-radius: 50px;
-  border-bottom-left-radius: 50px;
 }
-.home {
+.menu {
   display: flex;
-  height: 50px;
-  margin: auto;
-  padding-left: 70%;
+  margin-left: 1500px;
+  word-spacing: 20px;
+}
+.pets {
+  display: flex;
+  justify-content: center;
+  background-color: lightcyan;
+}
+.logo {
+}
+.adopt {
+  font-size: 20px;
+  font-weight: bold;
+  text-align: center;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  background-color: antiquewhite;
+  color: gray;
+  padding: 10px 20px;
+  border-radius: 20px;
+  border-color: lightcyan;
 }
 
-.pets {
-  display: grid;
-  padding: 40px;
-  margin-left: 30%;
-  margin-right: 30%;
+img {
+  border-radius: 50%;
+  width: 150px;
+  height: 150px;
+  object-fit: cover;
+  margin-top: 60px;
 }
+
 body {
-  background-image: images/frame.png;
-  background-size: ;
+  background-color: lightblue;
 }
-h2 {
-  text-align: center;
-  padding-top: 60px;
-}
+
 .gallery {
   display: flex;
   justify-content: center;
 }
-.gallery1 {
-  display: flex;
-  justify-content: center;
-}
+
 footer {
-  padding: 100px;
+  padding: 40px;
   text-align: center;
-  border-bottom: 20px;
-  border-color: greenyellow;
+  background-color: paleturquoise;
 }
-.list {
-  display: none;
-}
+
 .add {
   display: none;
 }
