@@ -11,6 +11,12 @@
       <div class="logo">
         <img src="images/logo.png" alt="Logo" height="100" />
       </div>
+      <p>MENU</p>
+      <div class="menu-icon">
+        <svg width="24" height="24" viewBox="0 0 24 24">
+          <path d="M3 18h18v-2H3v2zm0-5h18v-2H3v2zm0-7v2h18V6H3z"></path>
+        </svg>
+      </div>
       <div>
         <ul class="menu">
           <li><a href="#" data-page="support-us" class="active">Support us</a></li>
@@ -19,6 +25,7 @@
         </ul>
       </div>
     </header>
+
     <section>
       <div class="add">
         <label for="ownerName">Owner Name</label>
@@ -38,7 +45,9 @@
         <button>Submit</button>
       </div>
     </section>
+
     <button class="adopt">Adopt don't shop</button>
+
     <div class="pets">
       <div class="pet-item">
         <img src="images/adopt1.webp" alt="Dog" />
@@ -60,6 +69,48 @@
         <img src="images/adopt6.jpg" alt="Dog" height="200" />
         <button class="form">Adoption form</button>
       </div>
+    </div>
+
+    <div class="filter">
+      <form>Filters</form>
+      <ul>
+        <span>
+          <label for="species">Species:</label>
+          <select name="animal" id="animal">
+            <option>Select</option>
+            <option value="dog">Dog</option>
+            <option value="cat">Cat</option>
+          </select>
+        </span>
+        <span>
+          <label for="age">Age:</label>
+          <select name="animal" id="animal">
+            <option>Select</option>
+            <option value="dog">Under 1 year</option>
+            <option value="cat">1 year-2 year</option>
+            <option value="cat">2 year-5 year</option>
+            <option value="cat">+5 years</option>
+          </select>
+        </span>
+        <span>
+          <label for="weight">Weight:</label>
+          <select name="animal" id="animal">
+            <option value="dog">Select</option>
+            <option value="dog">Small</option>
+            <option value="cat">Medium</option>
+            <option value="cat">Large</option>
+          </select>
+        </span>
+        <span>
+          <label for="species">Species:</label>
+          <select name="animal" id="animal">
+            <option value="dog">Select</option>
+            <option value="dog">Dog</option>
+            <option value="cat">Cat</option>
+          </select>
+          <button>Search</button>
+        </span>
+      </ul>
     </div>
 
     <footer>

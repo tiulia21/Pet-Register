@@ -1,24 +1,49 @@
 header {
-  background-color: whitesmoke;
-  display: flex;
+  background-color: palegreen;
 }
+
 .menu {
-  display: flex;
-  margin-left: 1500px;
-  word-spacing: 20px;
+  margin-left: auto;
+  display: none;
 }
+
+.menu li {
+  margin: 0 15px;
+}
+
+.menu a {
+  color: blue;
+  text-decoration: none;
+  font-weight: bold;
+  transition: color 0.3s;
+}
+
+.menu a:hover {
+  color: green;
+}
+.menu-icon {
+  display: grid;
+  justify-content: end;
+}
+
 .pets {
   display: flex;
-  justify-content: center;
+  justify-content: space-between;
   background-color: lightcyan;
 }
 .logo {
+}
+p {
+  text-align: right;
+}
+.filter {
+  display: ;
 }
 .adopt {
   font-size: 20px;
   font-weight: bold;
   text-align: center;
-  display: block;
+  display: grid;
   margin-left: auto;
   margin-right: auto;
   background-color: antiquewhite;
@@ -29,11 +54,11 @@ header {
 }
 
 img {
-  border-radius: 50%;
-  width: 150px;
-  height: 150px;
+  width: 140px;
+  height: 120px;
   object-fit: cover;
-  margin-top: 60px;
+  margin-top: 40px;
+  border-radius: 80px;
 }
 
 body {
