@@ -9,8 +9,16 @@
   <body>
     <header>
       <div class="logo">
-        <img src="images/logo.png" alt="Logo" height="100" />
+        <img src="images/Cute.jpg" alt="Logo" height="100" />
       </div>
+
+      <ul class="menu-bar">
+        <li>ABOUT US</li>
+        <li>SPY AND NEUTER</li>
+        <li>ADOPT</li>
+        <li>VOLUNTEER</li>
+      </ul>
+
       <p>MENU</p>
       <div class="menu-icon">
         <svg width="24" height="24" viewBox="0 0 24 24">
@@ -20,18 +28,63 @@
       <div>
         <ul class="menu">
           <li><a href="#" data-page="support-us" class="active">Support us</a></li>
-          <button>Donate</button>
-          <button>Fundraise</button>
+          <div class="support">
+            <button>Donate</button>
+            <button>Fundraise</button>
+          </div>
           <li><a href="#" data-page="contact-us">Contact us</a></li>
           <div class="message">
             Leave us a message
             <textarea></textarea>
           </div>
           <li><a href="#" data-page="admin">Admin</a></li>
-          <label for="email"
-            >email
-            <input type="text" id="email" />
-          </label>
+          <div class="contact">
+            <label for="email"
+              >email
+              <input type="text" id="email" />
+            </label>
+          </div>
+        </ul>
+      </div>
+
+      <div class="filter">
+        <ul>
+          <span>
+            <label for="species">Species:</label>
+            <select name="animal" id="animal">
+              <option>Select</option>
+              <option value="dog">Dog</option>
+              <option value="cat">Cat</option>
+            </select>
+          </span>
+          <span>
+            <label for="age">Age:</label>
+            <select name="animal" id="animal">
+              <option>Select</option>
+              <option value="dog">Under 1 year</option>
+              <option value="cat">1 year-2 year</option>
+              <option value="cat">2 year-5 year</option>
+              <option value="cat">+5 years</option>
+            </select>
+          </span>
+          <span>
+            <label for="weight">Weight:</label>
+            <select name="animal" id="animal">
+              <option value="dog">Select</option>
+              <option value="dog">Small</option>
+              <option value="cat">Medium</option>
+              <option value="cat">Large</option>
+            </select>
+          </span>
+          <span>
+            <label for="sex">Sex:</label>
+            <select name="animal" id="animal">
+              <option value="dog">Select</option>
+              <option value="dog">Dog</option>
+              <option value="cat">Cat</option>
+            </select>
+            <button>Search</button>
+          </span>
         </ul>
       </div>
     </header>
@@ -56,8 +109,6 @@
       </div>
     </section>
 
-    <button class="adopt">Adopt don't shop</button>
-
     <div class="pets">
       <div class="pet-item">
         <img src="images/adopt1.webp" alt="Dog" />
@@ -81,64 +132,53 @@
       </div>
     </div>
 
-    <div class="filter">
-      <form>Filters</form>
-      <ul>
-        <span>
-          <label for="species">Species:</label>
-          <select name="animal" id="animal">
-            <option>Select</option>
-            <option value="dog">Dog</option>
-            <option value="cat">Cat</option>
-          </select>
-        </span>
-        <span>
-          <label for="age">Age:</label>
-          <select name="animal" id="animal">
-            <option>Select</option>
-            <option value="dog">Under 1 year</option>
-            <option value="cat">1 year-2 year</option>
-            <option value="cat">2 year-5 year</option>
-            <option value="cat">+5 years</option>
-          </select>
-        </span>
-        <span>
-          <label for="weight">Weight:</label>
-          <select name="animal" id="animal">
-            <option value="dog">Select</option>
-            <option value="dog">Small</option>
-            <option value="cat">Medium</option>
-            <option value="cat">Large</option>
-          </select>
-        </span>
-        <span>
-          <label for="sex">Sex:</label>
-          <select name="animal" id="animal">
-            <option value="dog">Select</option>
-            <option value="dog">Dog</option>
-            <option value="cat">Cat</option>
-          </select>
-          <button>Search</button>
-        </span>
-      </ul>
-    </div>
-
     <footer>
       <h2>Happy end stories</h2>
       <div class="gallery">
-        <div><img src="images/pic1.webp" alt="Dog" height="200" /></div>
-        <div class="text"><p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit</p></div>
-        <div><img src="images/pic7.webp" alt="Dog" height="200" /></div>
-        <div class="text"><p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit</p></div>
-        <div><img src="images/pic3.jpg" alt="Dog" height="200" /></div>
-        <div class="text"><p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit</p></div>
-        <div><img src="images/pic4.jpg" alt="Dog" height="200" /></div>
-        <div class="text"><p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit</p></div>
-        <div><img src="images/pic5.jpg" alt="Dog" height="200" /></div>
-        <div class="text"><p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit</p></div>
-        <div><img src="images/pic6.webp" alt="Dog" height="200" /></div>
-        <div class="text"><p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit</p></div>
+        <figure class="img">
+          <img src="images/pic1.webp" alt="Dog" height="200" />
+          <p class="text">
+            Lorem ipsum dolor sit amet, consectetuer adipiscing elit, Lorem ipsum dolor sit amet, consectetuer
+            adipiscing elit
+          </p>
+        </figure>
+        <figure>
+          <img src="images/pic7.webp" alt="Dog" height="200" />
+          <p class="text">
+            Lorem ipsum dolor sit amet, consectetuer adipiscing elit, Lorem ipsum dolor sit amet, consectetuer
+            adipiscing elit
+          </p>
+        </figure>
+        <figure>
+          <img src="images/pic3.jpg" alt="Dog" height="200" />
+          <p class="text">
+            Lorem ipsum dolor sit amet, consectetuer adipiscing elit,Lorem ipsum dolor sit amet, consectetuer adipiscing
+            elit
+          </p>
+        </figure>
+        <figure>
+          <img src="images/pic4.jpg" alt="Dog" height="200" />
+          <p class="text">
+            Lorem ipsum dolor sit amet, consectetuer adipiscing elit,Lorem ipsum dolor sit amet, consectetuer adipiscing
+            elit
+          </p>
+        </figure>
+        <figure>
+          <img src="images/pic5.jpg" alt="Dog" height="200" />
+          <p class="text">
+            Lorem ipsum dolor sit amet, consectetuer adipiscing elit,Lorem ipsum dolor sit amet, consectetuer adipiscing
+            elit
+          </p>
+        </figure>
+        <figure>
+          <img src="images/pic6.webp" alt="Dog" height="200" />
+          <p class="text">
+            Lorem ipsum dolor sit amet, consectetuer adipiscing elit,Lorem ipsum dolor sit amet, consectetuer adipiscing
+            elit
+          </p>
+        </figure>
       </div>
     </footer>
+    <button class="adopt">Adopt don't shop</button>
   </body>
 </html>
