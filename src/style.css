@@ -1,37 +1,58 @@
 header {
-  background-color: palegreen;
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  background: #f4f4f4;
+  padding: 20px;
 }
-.menu-bar {
-  color: rgb(103, 97, 97);
-  margin-left: 2%;
-  padding: 2px;
-  font-weight: bold;
+
+.menu-bar ul {
+  display: flex;
+  list-style: none;
+  position: absolute;
+  top: 50px;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: #f4f4f4;
+  transition: opacity 0.5s, visibility 0s 0.5s;
+  height: 20px;
 }
 .menu-bar li {
-  display: inline-block;
-  padding: 15px;
-  margin-right: 20px;
-  outline-style: groove;
-  outline-color: aqua;
-  border-radius: 20px;
-  outline-width: 3px;
+  margin: 80px 10px; /* Adds horizontal spacing between menu items */
 }
 
-.menu {
+.menu-bar a,
+.menu-bar button {
+  text-decoration: none; /* Removes underline from links */
+  color: black; /* Sets the text color for links */
+  background-color: transparent; /* Ensures buttons have no background */
+  cursor: pointer; /* Changes the cursor to a pointer when hovering over buttons */
+  font-family: Verdana, sans-serif; /* Sets the font for text within the menu */
+  border-color: green;
+}
+
+.menu-bar a:hover,
+.menu-bar button:hover {
+  color: green; /* Changes text color on hover for visual feedback */
+}
+.submenu {
+  visibility: hidden;
+}
+.subcontact {
+  margin-left: 70%;
+  visibility: hidden;
+}
+.message-item {
+  display: none; /* Aligns the message text and submit button in a row */
+  align-items: center; /* Vertically centers items in the .message-item */
+}
+
+.message-item textarea {
+  height: 30px; /* Sets a fixed height for the textarea */
+  margin-right: 10px; /* Adds space between the textarea and the button */
   display: none;
-  list-style: none;
-  text-align: right;
-  position: absolute;
-  top: 30px;
-  right: 10px;
-  color: green;
 }
 
-.menu-icon {
-  position: fixed;
-  top: 50px;
-  right: 20px;
-}
 p {
   position: absolute;
   top: 10px;
@@ -47,11 +68,6 @@ p {
   height: 100px;
   margin-right: 70px;
 }
-
-p {
-  text-align: right;
-}
-
 .adopt {
   font-size: 20px;
   font-weight: bold;
@@ -121,31 +137,14 @@ footer {
 }
 
 .filter {
-  display: flex;
-  margin-left: 65%;
+  margin-left: 50%;
+  margin-top: 5%;
+  visibility: hidden;
 }
-.btn .btn1 {
-  display: none;
-}
-.support {
-  display: none;
-}
-.message {
-  display: none;
-}
+
 .contact {
   display: none;
 }
 .search {
   text-align: end;
-}
-.menu-bar {
-  list-style: none;
-  display: flex;
-  flex: 1;
-  justify-content: center;
-  margin-right: 10px;
-  color: green;
-  font-style: bold;
-  line-height: 1;
 }
