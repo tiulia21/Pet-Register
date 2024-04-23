@@ -3,60 +3,56 @@ header {
   justify-content: center;
   width: 100%;
   background: #f4f4f4;
-  padding: 20px;
+  padding: 5px;
+}
+#menu-bar {
+  color: rgb(103, 97, 97);
+
+  padding: 10px;
+  font-weight: bold;
+  margin-top: 5%;
+}
+#menu-bar li {
+  display: inline-block;
+  outline-style: groove;
+  outline-color: aqua;
+  border-radius: 5px;
+  outline-width: 4px;
 }
 
-.menu-bar ul {
-  display: flex;
-  list-style: none;
-  position: absolute;
-  top: 50px;
-  left: 50%;
-  transform: translateX(-50%);
-  background-color: #f4f4f4;
-  transition: opacity 0.5s, visibility 0s 0.5s;
-  height: 20px;
+#menu-bar a {
+  display: inline-block;
+  text-decoration: none;
+  padding: 5px 10px;
+  border-radius: 4px;
+  transition: 0.5s;
+  font-size: 20px;
 }
-.menu-bar li {
-  margin: 80px 10px; /* Adds horizontal spacing between menu items */
+#menu-bar a:visited {
+  color: rgb(55, 115, 158);
 }
 
-.menu-bar a,
-.menu-bar button {
-  text-decoration: none; /* Removes underline from links */
-  color: black; /* Sets the text color for links */
-  background-color: transparent; /* Ensures buttons have no background */
-  cursor: pointer; /* Changes the cursor to a pointer when hovering over buttons */
-  font-family: Verdana, sans-serif; /* Sets the font for text within the menu */
-  border-color: green;
+#menu-bar a.active,
+#menu-bar a:hover {
+  color: lightskyblue;
+  background: #f4f4f4;
+  border-radius: 20px;
 }
 
-.menu-bar a:hover,
-.menu-bar button:hover {
-  color: green; /* Changes text color on hover for visual feedback */
-}
 .submenu {
-  visibility: hidden;
+  color: red;
+}
+td {
+  display: block;
+  position: relative;
+  clear: both;
 }
 .subcontact {
+  display: none !important;
+}
+.filter {
   margin-left: 70%;
-  visibility: hidden;
-}
-.message-item {
-  display: none; /* Aligns the message text and submit button in a row */
-  align-items: center; /* Vertically centers items in the .message-item */
-}
-
-.message-item textarea {
-  height: 30px; /* Sets a fixed height for the textarea */
-  margin-right: 10px; /* Adds space between the textarea and the button */
   display: none;
-}
-
-p {
-  position: absolute;
-  top: 10px;
-  right: 10px;
 }
 .pets {
   display: flex;
@@ -139,12 +135,8 @@ footer {
 .filter {
   margin-left: 50%;
   margin-top: 5%;
-  visibility: hidden;
 }
 
-.contact {
-  display: none;
-}
 .search {
   text-align: end;
 }
