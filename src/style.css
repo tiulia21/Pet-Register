@@ -40,7 +40,9 @@ header {
   margin-top: 5%;
   margin-left: 25%;
 }
-
+.text-detail {
+  display: none;
+}
 .subcontact {
   display: none;
   justify-content: center;

@@ -90,3 +90,23 @@ document.addEventListener("DOMContentLoaded", function () {
     });
   });
 });
+document.addEventListener("DOMContentLoaded", function () {
+  var formButtons = document.querySelectorAll(".form");
+  var textDetails = document.querySelectorAll(".text-detail");
+
+  formButtons.forEach(function (button, index) {
+    button.addEventListener("click", function () {
+      toggleTextDetail(index);
+    });
+  });
+
+  function toggleTextDetail(index) {
+    textDetails.forEach(function (detail, i) {
+      if (i === index) {
+        detail.style.display = detail.style.display === "block" ? "none" : "block";
+      } else {
+        detail.style.display = "none";
+      }
+    });
+  }
+});
