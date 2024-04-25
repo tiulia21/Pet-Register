@@ -1,16 +1,11 @@
 import "./style.css";
 
 document.addEventListener("DOMContentLoaded", function () {
-  // Select the 'VOLUNTEER' menu item and the submenu
-  var volunteerLink = document.querySelector(".menu-item4 a"); // Assuming the link is within .menu-item4
-  var submenu = document.getElementById("submenu");
+  var volunteerLink = document.querySelector(".menu-item4");
+  var submenu = document.querySelector(".submenu");
 
-  // Check if both elements exist
   if (volunteerLink && submenu) {
-    // Add click event listener to the volunteer link
-    volunteerLink.addEventListener("click", function (event) {
-      event.preventDefault(); // Prevent the default anchor link behavior
-      // Toggle the display of the submenu
+    volunteerLink.addEventListener("click", function () {
       if (submenu.style.display === "block") {
         submenu.style.display = "none";
       } else {
@@ -20,11 +15,10 @@ document.addEventListener("DOMContentLoaded", function () {
   }
 });
 document.addEventListener("DOMContentLoaded", function () {
-  var contact = document.querySelector(".menu-item5 a");
-  var subcontact = document.getElementById("subcontact");
+  var contact = document.querySelector(".menu-item5");
+  var subcontact = document.querySelector(".subcontact");
   if (contact && subcontact) {
-    contact.addEventListener("click", function (event) {
-      event.preventDefault();
+    contact.addEventListener("click", function () {
       if (subcontact.style.display === "block") {
         subcontact.style.display = "none";
       } else {
@@ -44,7 +38,6 @@ document.addEventListener("DOMContentLoaded", function () {
     }
   });
 });
-
 var galleries = document.getElementsByClassName("gallery");
 var texts = document.getElementsByClassName("text");
 

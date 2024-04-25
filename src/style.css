@@ -6,20 +6,14 @@ header {
   padding: 5px;
 }
 #menu-bar {
-  color: rgb(103, 97, 97);
-
-  padding: 10px;
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 50px;
   font-weight: bold;
-  margin-top: 5%;
+  background-color: aliceblue;
 }
-#menu-bar li {
-  display: inline-block;
-  outline-style: groove;
-  outline-color: aqua;
-  border-radius: 5px;
-  outline-width: 4px;
-}
-
 #menu-bar a {
   display: inline-block;
   text-decoration: none;
@@ -29,26 +23,30 @@ header {
   font-size: 20px;
 }
 #menu-bar a:visited {
-  color: rgb(55, 115, 158);
+  color: green;
 }
 
 #menu-bar a.active,
 #menu-bar a:hover {
-  color: lightskyblue;
+  color: lightseagreen;
   background: #f4f4f4;
   border-radius: 20px;
 }
 
 .submenu {
-  color: red;
+  display: none;
+  justify-content: center;
+  position: fixed;
+  margin-top: 5%;
+  margin-left: 25%;
 }
-td {
-  display: block;
-  position: relative;
-  clear: both;
-}
+
 .subcontact {
-  display: none !important;
+  display: none;
+  justify-content: center;
+  position: fixed;
+  margin-top: 5%;
+  margin-left: 50%;
 }
 .filter {
   margin-left: 70%;
@@ -65,14 +63,14 @@ td {
   margin-right: 70px;
 }
 .adopt {
-  font-size: 20px;
+  font-size: 30px;
   font-weight: bold;
   text-align: center;
   display: grid;
   margin-left: auto;
   margin-right: auto;
   background-color: antiquewhite;
-  color: gray;
+  color: green;
   padding: 10px 20px;
   border-radius: 20px;
   border-color: lightcyan;
@@ -118,25 +116,31 @@ footer {
 }
 .text {
   display: none;
-  position: absolute;
-  bottom: 30px;
+  position: fixed;
   left: 60%;
   transform: translateX(-70%);
   background-color: rgba(255, 255, 255, 0.772);
   text-align: left;
   border-radius: 20px;
-  font-size: 14px;
-  color: #333;
+  font-size: 20px;
+  color: green;
 }
 .add {
   display: none;
 }
-
-.filter {
-  margin-left: 50%;
-  margin-top: 5%;
+.form {
+  font-size: 12px;
+  font-weight: bold;
+  text-align: center;
+  display: grid;
+  margin-left: auto;
+  margin-right: auto;
+  background-color: antiquewhite;
+  color: green;
+  padding: 10px 20px;
+  border-radius: 20px;
+  border-color: lightcyan;
 }
-
 .search {
   text-align: end;
 }
