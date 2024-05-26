@@ -16,21 +16,24 @@
         <div class="menu-item"><a href="#about">ABOUT US</a></div>
         <div class="menu-item2"><a href="#spy">SPY AND NEUTER</a></div>
         <div class="menu-item3"><a href="#adopt">ADOPT &#128062;</a></div>
-        <div class="menu-item4"><a href="#volunteer">VOLUNTEER &#9829;</a></div>
+        <div class="menu-item4">
+          <a href="#volunteer">VOLUNTEER &#9829;</a>
+          <div class="submenu">
+            <button>Donate</button>
+            <br />
+            <button>Fundraise</button>
+          </div>
+        </div>
         <div class="menu-item5"><a href="#contact">CONTACT US</a></div>
+        <div class="subcontact">
+          <div>Leave us a message</div>
+          <textarea></textarea>
+          <button>Submit</button>
+        </div>
       </div>
-      <div class="submenu">
-        <button>Donate</button>
-        <br />
-        <button>Fundraise</button>
-      </div>
+    </header>
 
-      <div class="subcontact">
-        <div>Leave us a message</div>
-        <textarea></textarea>
-        <button>Submit</button>
-      </div>
-
+    <section>
       <div class="filter">
         <ul>
           <li>
@@ -63,17 +66,14 @@
           <li>
             <label for="sex">Sex:</label>
             <select name="animal" id="animal">
-              <option value="dog">Select</option>
-              <option value="dog">Dog</option>
-              <option value="cat">Cat</option>
+              <option value="">Select</option>
+              <option value="female">Female</option>
+              <option value="male">Male</option>
             </select>
             <button>Search</button>
           </li>
         </ul>
       </div>
-    </header>
-
-    <section>
       <div class="add">
         <label for="ownerName">Owner Name</label>
         <input type="text" id="ownerName" />
@@ -94,8 +94,8 @@
     </section>
 
     <div class="pets">
-      <div class="pet-item">
-        <img src="images/adopt1.webp" alt="Dog" />
+      <div class="pet-item" data-specifies="dog">
+        <img src="images/adopt1.webp" alt="dog" />
         <button class="form">View details</button>
         <div class="text-detail">
           Lorem ipsum dolor sit amet, consectetuer adipiscing elit, Lorem ipsum dolor sit amet, consectetuer adipiscing
@@ -105,8 +105,8 @@
           amet, consectetuer adipiscing elit
         </div>
       </div>
-      <div class="pet-item">
-        <img src="images/cat-2083492_640.jpg" alt="Cat" />
+      <div class="pet-item" data-specifies="cat">
+        <img src="images/cat-2083492_640.jpg" alt="cat" />
         <button class="form">View details</button>
         <div class="text-detail">
           Lorem ipsum dolor sit amet, consectetuer adipiscing elit, Lorem ipsum dolor sit amet, consectetuer adipiscing
@@ -116,8 +116,8 @@
           amet, consectetuer adipiscing elit
         </div>
       </div>
-      <div class="pet-item">
-        <img src="images/adopt2.webp" alt="Dog" height="200" />
+      <div class="pet-item" data-specifies="dog">
+        <img src="images/adopt2.webp" alt="dog" height="200" />
         <button class="form">View details</button>
         <div class="text-detail">
           Lorem ipsum dolor sit amet, consectetuer adipiscing elit, Lorem ipsum dolor sit amet, consectetuer adipiscing
@@ -128,8 +128,8 @@
         </div>
       </div>
 
-      <div class="pet-item">
-        <img src="images/kitty-cat-kitten-pet-45201.jpeg" alt="Cat" height="200" />
+      <div class="pet-item" data-specifies="cat">
+        <img src="images/kitty-cat-kitten-pet-45201.jpeg" alt="cat" height="200" />
         <button class="form">View details</button>
         <div class="text-detail">
           Lorem ipsum dolor sit amet, consectetuer adipiscing elit, Lorem ipsum dolor sit amet, consectetuer adipiscing
@@ -139,8 +139,8 @@
           amet, consectetuer adipiscing elit
         </div>
       </div>
-      <div class="pet-item">
-        <img src="images/Cat_in_the_Forest_Background-1551.jpg" alt="Cat" height="200" />
+      <div class="pet-item" data-specifies="cat">
+        <img src="images/Cat_in_the_Forest_Background-1551.jpg" alt="cat" height="200" />
         <button class="form">View details</button>
         <div class="text-detail">
           Lorem ipsum dolor sit amet, consectetuer adipiscing elit, Lorem ipsum dolor sit amet, consectetuer adipiscing
@@ -150,8 +150,8 @@
           amet, consectetuer adipiscing elit
         </div>
       </div>
-      <div class="pet-item">
-        <img src="images/adopt3.jpg" alt="Dog" height="200" />
+      <div class="pet-item" data-specifies="dog">
+        <img src="images/adopt3.jpg" alt="dog" height="200" />
         <button class="form">View details</button>
         <div class="text-detail">
           Lorem ipsum dolor sit amet, consectetuer adipiscing elit, Lorem ipsum dolor sit amet, consectetuer adipiscing
@@ -161,8 +161,8 @@
           amet, consectetuer adipiscing elit
         </div>
       </div>
-      <div class="pet-item">
-        <img src="images/adopt4.webp" alt="Dog" height="200" />
+      <div class="pet-item" data-specifies="dog">
+        <img src="images/adopt4.webp" alt="dog" height="200" />
         <button class="form">View details</button>
         <div class="text-detail">
           Lorem ipsum dolor sit amet, consectetuer adipiscing elit, Lorem ipsum dolor sit amet, consectetuer adipiscing
@@ -172,8 +172,8 @@
           amet, consectetuer adipiscing elit
         </div>
       </div>
-      <div class="pet-item">
-        <img src="images/adopt6.jpg" alt="Dog" height="200" />
+      <div class="pet-item" data-specifies="dog">
+        <img src="images/adopt6.jpg" alt="dog" height="200" />
         <button class="form">View details</button>
         <div class="text-detail">
           Lorem ipsum dolor sit amet, consectetuer adipiscing elit, Lorem ipsum dolor sit amet, consectetuer adipiscing

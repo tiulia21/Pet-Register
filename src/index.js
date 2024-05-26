@@ -56,7 +56,6 @@ document.addEventListener("DOMContentLoaded", function () {
   const images = document.querySelectorAll(".pet-item img");
 
   images.forEach(function (image) {
-    // Store the original styles
     const originalStyle = {
       width: image.style.width,
       height: image.style.height,
@@ -69,7 +68,6 @@ document.addEventListener("DOMContentLoaded", function () {
 
     image.addEventListener("click", function () {
       if (image.style.position === "fixed") {
-        // Revert to original styles
         image.style.position = originalStyle.position;
         image.style.top = originalStyle.top;
         image.style.left = originalStyle.left;
@@ -78,12 +76,11 @@ document.addEventListener("DOMContentLoaded", function () {
         image.style.zIndex = originalStyle.zIndex;
         image.style.transform = originalStyle.transform;
       } else {
-        // Apply full-screen styles
         image.style.position = "fixed";
         image.style.top = "50%";
         image.style.left = "50%";
         image.style.transform = "translate(-50%, -50%)";
-        image.style.width = "auto"; // Adjust this if needed
+        image.style.width = "auto";
         image.style.height = "100vh";
         image.style.zIndex = "9999";
       }
@@ -109,4 +106,35 @@ document.addEventListener("DOMContentLoaded", function () {
       }
     });
   }
+});
+document.addEventListener("DOMContentLoaded", function () {
+  var menuItem3 = document.querySelector(".menu-item3");
+  var filterContent = document.querySelector(".filter");
+
+  menuItem3.addEventListener("click", function () {
+    filterContent.classList.toggle("show");
+  });
+});
+
+document.addEventListener("DOMContentLoaded", function () {
+  const speciesSelect = document.getElementById("animal");
+  const petItems = document.querySelectorAll(".pet-item");
+
+  // Initially display all pet items
+  petItems.forEach(function (item) {
+    item.style.display = "block"; // Ensure all items are shown initially
+  });
+
+  speciesSelect.addEventListener("change", function () {
+    const selectedSpecies = this.value;
+
+    petItems.forEach(function (item) {
+      const itemSpecies = item.getAttribute("data-specifies");
+      if (selectedSpecies === "select" || itemSpecies === selectedSpecies) {
+        item.style.display = "block"; // Ensure the items are displayed
+      } else {
+        item.style.display = "none"; // Ensure the items are hidden
+      }
+    });
+  });
 });
