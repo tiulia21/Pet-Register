@@ -96,5 +96,39 @@ document.addEventListener("DOMContentLoaded", function () {
         item.style.display = selectedSpecies === "select" || itemSpecies === selectedSpecies ? "block" : "none";
       });
     });
+    ageSelect.addEventListener("change", function () {
+      const selectedAge = this.value;
+
+      petItems.forEach(item => {
+        const itemAge = item.getAttribute("data-age");
+        item.style.display = selectedAge === "select" || itemAge === selectedAge ? "block" : "none";
+      });
+    });
+  }
+});
+
+document.addEventListener("DOMContentLoaded", function () {
+  // Select the age filter dropdown
+  const ageSelect = document.getElementById("animal-age");
+  const petItems = document.querySelectorAll(".pet-item");
+
+  if (ageSelect) {
+    // Display all pet items initially
+    petItems.forEach(item => (item.style.display = "block"));
+
+    // Add event listener to age dropdown
+    ageSelect.addEventListener("change", function () {
+      const selectedAge = this.value;
+
+      // Filter pet items based on selected age
+      petItems.forEach(item => {
+        const itemAge = item.getAttribute("data-age");
+        if (selectedAge === "Select" || itemAge === selectedAge) {
+          item.style.display = "block";
+        } else {
+          item.style.display = "none";
+        }
+      });
+    });
   }
 });
