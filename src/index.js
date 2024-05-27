@@ -1,60 +1,39 @@
 import "./style.css";
 
 document.addEventListener("DOMContentLoaded", function () {
-  var volunteerLink = document.querySelector(".menu-item4");
-  var submenu = document.querySelector(".submenu");
-
+  const volunteerLink = document.querySelector(".menu-item4");
+  const submenu = document.querySelector(".submenu");
   if (volunteerLink && submenu) {
     volunteerLink.addEventListener("click", function () {
-      if (submenu.style.display === "block") {
-        submenu.style.display = "none";
-      } else {
-        submenu.style.display = "block";
-      }
+      submenu.style.display = submenu.style.display === "block" ? "none" : "block";
     });
   }
-});
-document.addEventListener("DOMContentLoaded", function () {
-  var contact = document.querySelector(".menu-item5");
-  var subcontact = document.querySelector(".subcontact");
+
+  const contact = document.querySelector(".menu-item5");
+  const subcontact = document.querySelector(".subcontact");
   if (contact && subcontact) {
     contact.addEventListener("click", function () {
-      if (subcontact.style.display === "block") {
-        subcontact.style.display = "none";
-      } else {
-        subcontact.style.display = "block";
-      }
+      subcontact.style.display = subcontact.style.display === "block" ? "none" : "block";
     });
   }
-});
 
-document.addEventListener("DOMContentLoaded", function () {
-  var adopt = document.querySelector(".adopt");
-  adopt.addEventListener("click", function () {
-    if (adopt.innerText == "Adopt don't shop") {
-      adopt.innerText = "Thank you for adopting!";
-    } else {
-      adopt.innerText = "Adopt don't shop";
-    }
-  });
-});
-var galleries = document.getElementsByClassName("gallery");
-var texts = document.getElementsByClassName("text");
+  const adopt = document.querySelector(".adopt");
+  if (adopt) {
+    adopt.addEventListener("click", function () {
+      adopt.innerText = adopt.innerText === "Adopt don't shop" ? "Thank you for adopting!" : "Adopt don't shop";
+    });
+  }
 
-for (let i = 0; i < galleries.length; i++) {
-  galleries[i].addEventListener("click", function () {
-    var text = texts[i];
-    if (text.style.display === "none" || text.style.display === "") {
-      text.style.display = "block";
-    } else {
-      text.style.display = "none";
-    }
-  });
-}
+  const galleries = document.getElementsByClassName("gallery");
+  const texts = document.getElementsByClassName("text");
+  for (let i = 0; i < galleries.length; i++) {
+    galleries[i].addEventListener("click", function () {
+      const text = texts[i];
+      text.style.display = text.style.display === "none" || text.style.display === "" ? "block" : "none";
+    });
+  }
 
-document.addEventListener("DOMContentLoaded", function () {
   const images = document.querySelectorAll(".pet-item img");
-
   images.forEach(function (image) {
     const originalStyle = {
       width: image.style.width,
@@ -68,13 +47,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
     image.addEventListener("click", function () {
       if (image.style.position === "fixed") {
-        image.style.position = originalStyle.position;
-        image.style.top = originalStyle.top;
-        image.style.left = originalStyle.left;
-        image.style.width = originalStyle.width;
-        image.style.height = originalStyle.height;
-        image.style.zIndex = originalStyle.zIndex;
-        image.style.transform = originalStyle.transform;
+        Object.assign(image.style, originalStyle);
       } else {
         image.style.position = "fixed";
         image.style.top = "50%";
@@ -86,55 +59,42 @@ document.addEventListener("DOMContentLoaded", function () {
       }
     });
   });
-});
-document.addEventListener("DOMContentLoaded", function () {
-  var formButtons = document.querySelectorAll(".form");
-  var textDetails = document.querySelectorAll(".text-detail");
 
-  formButtons.forEach(function (button, index) {
-    button.addEventListener("click", function () {
-      toggleTextDetail(index);
-    });
+  const formButtons = document.querySelectorAll(".form");
+  const textDetails = document.querySelectorAll(".text-detail");
+
+  formButtons.forEach((button, index) => {
+    button.addEventListener("click", () => toggleTextDetail(index));
   });
 
   function toggleTextDetail(index) {
-    textDetails.forEach(function (detail, i) {
-      if (i === index) {
-        detail.style.display = detail.style.display === "block" ? "none" : "block";
-      } else {
-        detail.style.display = "none";
-      }
+    textDetails.forEach((detail, i) => {
+      detail.style.display = i === index ? (detail.style.display === "block" ? "none" : "block") : "none";
     });
   }
-});
-document.addEventListener("DOMContentLoaded", function () {
-  var menuItem3 = document.querySelector(".menu-item3");
-  var filterContent = document.querySelector(".filter");
 
-  menuItem3.addEventListener("click", function () {
-    filterContent.classList.toggle("show");
-  });
-});
+  const menuItem3 = document.querySelector(".menu-item3");
+  const filterContent = document.querySelector(".filter");
 
-document.addEventListener("DOMContentLoaded", function () {
+  if (menuItem3 && filterContent) {
+    menuItem3.addEventListener("click", function () {
+      filterContent.classList.toggle("show");
+    });
+  }
+
   const speciesSelect = document.getElementById("animal");
   const petItems = document.querySelectorAll(".pet-item");
 
-  // Initially display all pet items
-  petItems.forEach(function (item) {
-    item.style.display = "block"; // Ensure all items are shown initially
-  });
+  if (speciesSelect) {
+    petItems.forEach(item => (item.style.display = "block"));
 
-  speciesSelect.addEventListener("change", function () {
-    const selectedSpecies = this.value;
+    speciesSelect.addEventListener("change", function () {
+      const selectedSpecies = this.value;
 
-    petItems.forEach(function (item) {
-      const itemSpecies = item.getAttribute("data-specifies");
-      if (selectedSpecies === "select" || itemSpecies === selectedSpecies) {
-        item.style.display = "block"; // Ensure the items are displayed
-      } else {
-        item.style.display = "none"; // Ensure the items are hidden
-      }
+      petItems.forEach(item => {
+        const itemSpecies = item.getAttribute("data-specifies");
+        item.style.display = selectedSpecies === "select" || itemSpecies === selectedSpecies ? "block" : "none";
+      });
     });
-  });
+  }
 });
